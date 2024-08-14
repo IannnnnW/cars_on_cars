@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoC - Add Car</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <%- include("templates/navbar") %>
+    <main class="d-flex justify-content-center">
+        <form method="POST" action="/cars/addcar" enctype="multipart/form-data" class="d-flex flex-column w-50 gap-2 mb-3"> 
+            <label for="brand">Brand: </label>
+            <input type="text" class="brand" id="brand" name="brand" required/>
+            <label for="model">Model: </label>
+            <input type="text" class="model" id="model" name="model" required/>
+            <label for="year">Year: </label>
+            <input type="number" class="year" id="year" name="year" required/>
+            <div class="d-flex gap-2">
+                <% categories.forEach( category => {%>
+                    <input type="checkbox" class="<%= category.name %>" id="<%= category.name %>" name="categories" value="<%= category.id %>"/>
+                    <label for="<%= category.name %>"><%= category.name %></label>
+                <% }) %>
+            </div>
+            <label for="description">Description</label>
+            <textarea name="description" id="description" name="description" rows="10"></textarea>
+            <label for="car-image">Car Image</label>
+            <input type="file" class="car-image" id="car-image" name="car_asset" required/>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>
