@@ -17,24 +17,24 @@
                 <p><%= car.description %></p>
                 <div class="d-flex gap-3 mb-3">
                     <% categories.forEach( category => { %>
-                        <span class="category"><%= category.name %></span>
+                        <a class="category" href="/categories/<%= category.name %>"><%= category.name %></a>
                     <% }) %>
                 </div>
                 <div class="car-info">
                     <div class="d-flex flex-column">
-                        <span class="info-text">YEAR</span>
+                        <span class="carinfo-text">YEAR</span>
                         <span><%= car.year %></span>
                     </div>
                     <div class="d-flex flex-column">
-                        <span class="info-text">DOORS</span>
+                        <span class="carinfo-text">DOORS</span>
                         <span><%= car.doors %></span>
                     </div>
                     <div class="d-flex flex-column">
-                        <span class="info-text">COLOR</span>
+                        <span class="carinfo-text">COLOR</span>
                         <span><%= car.color %></span>
                     </div>
                     <div class="d-flex flex-column">
-                        <span class="info-text">ENGINE</span>
+                        <span class="carinfo-text">ENGINE</span>
                         <span><%= car.engine %>hp</span>
                     </div>
                 </div>

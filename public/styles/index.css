@@ -33,6 +33,10 @@ input{
     border: none;
 }
 
+a{
+    text-decoration: none;
+}
+
 li a{
     color: var(--nav-bar-color);
     padding: 0.6rem
@@ -101,5 +105,71 @@ nav{
 
 .landing-text{
     font-weight: 200;
-    font-size: 3rem;
+    font-size: 4rem;
+}
+
+.animated-float {
+    animation: float-in 1.5s ease-out forwards;
+}
+
+@keyframes float-in {
+    0% {
+        transform: translate(-50%, -50%) translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+.car-section {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    padding: 50px 0;
+}
+
+.car-image {
+    width: 100%;
+    height: auto;
+    opacity: 0.8;
+}
+
+.info-text {
+    position: relative;
+    top: -400px;
+    margin: 0 auto;
+    max-width: 600px;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+.info-text h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.info-text p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.scroll-animate {
+    animation: slide-up 1s ease-out forwards;
 }

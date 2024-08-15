@@ -18,3 +18,8 @@ module.exports.searchCars = asyncHandler( async (req, res) => {
     const searchResult = await db.searchCar(q)
     res.render("searchresult", {q:q, result: searchResult})
 })
+
+module.exports.returnCategoryCars = asyncHandler( async (req, res) => {
+    const category = req.params.carCategory
+    console.log(category)
+})

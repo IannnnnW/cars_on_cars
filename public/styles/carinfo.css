@@ -27,7 +27,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
 }
-.info-text{
+.carinfo-text{
     color: gray;
     font-size: 0.8rem;
 }

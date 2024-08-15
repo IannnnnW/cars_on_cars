@@ -36,6 +36,7 @@ const addCategory = require('../controllers/addNewCategory')
 categoryRouter.get("/", getCategories.returnCategories)
 categoryRouter.get("/addcategory", addCategory.createNewCategoryForm)
 categoryRouter.post("/addcategory", uploads.single('category_asset'), addCategory.createNewCategory)
+categoryRouter.get("/:carCategory", getCategories.returnCategoryCars)
 
 module.exports = categoryRouter
 
