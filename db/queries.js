@@ -57,6 +57,11 @@ async function getCarById(id){
     return rows
 }
 
+async function searchCar(q){
+    const { rows } = await Pool.query(`SELECT * FROM cars WHERE model ILIKE $1 OR brand ILIKE $1`, [`%${q}%`])
+    return rows
+}
+
 module.exports = {
     getAllCategories,
     getAllCars,
@@ -65,4 +70,5 @@ module.exports = {
     addNewCarCategory,
     addNewCategory,
     getCarById,
+    searchCar
 }

@@ -12,3 +12,9 @@ module.exports.returnCarInfo = asyncHandler(async (req, res)=> {
    const carCategories = await db.getCarCategories(carId)
    res.render("carinfo", {car: car[0], categories: carCategories})
 })
+
+module.exports.searchCars = asyncHandler( async (req, res) => {
+    const { q } = req.query
+    const searchResult = await db.searchCar(q)
+    res.render("searchresult", {q:q, result: searchResult})
+})
