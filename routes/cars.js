@@ -38,4 +38,6 @@ carRouter.get("/addcar", addCar.addCarForm)
 
 carRouter.post("/addcar", uploads.single('car_asset') ,addCar.addNewCar)
 
+carRouter.get("/:carId", getCars.returnCarInfo)
+
 module.exports = carRouter

@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins&display=swap');
+
+:root{
+    --body-color: #000;
+    --font-color: #fff;
+    --textarea-bg-clr: #242424;
+    --input-bg-clr: #242424;
+    --input-color: #fff;
+    --nav-bar-color: #fff;
+    --nav-bar-hover-color: #242424;
+    --button-bg-color: #242424;
+    --button-color: #fff;
+}
+
+body{
+    background-color: var(--body-color);
+    color: var(--font-color);
+    font-family: "Inter", sans-serif;
+}
+
+textarea{
+    background-color: var(--textarea-bg-clr);
+    border: none;
+    border-radius: 10px;
+    color: var(--input-color);
+}
+
+input{
+    background-color: var(--input-bg-clr);
+    padding: 0.5rem;
+    border-radius: 10px;
+    color: var(--input-color) ;
+    border: none;
+}
+
+li a{
+    color: var(--nav-bar-color);
+    padding: 0.6rem
+}
+li a:hover{
+    background-color: var(--nav-bar-hover-color);
+    border-radius: 15px;
+    padding: 0.6rem;
+}
+button{
+    background: var(--button-bg-color);
+    color: var(--button-color);
+    border: none;
+    border-radius: 10px;
+    padding: 0.3rem;
+}
+
+nav{
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(10px);
+}
+
+.position-relative {
+    position: relative;
+}
+
+.img-fluid {
+    width: 100%; 
+    height: auto;
+    border-radius: 15px;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    color: white; 
+    text-align: center;
+}
+
+.zoom-container{
+    overflow: hidden;
+}
+
+.zoom-image{
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: auto;
+}
+.zoom-image:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.landing-image{
+    height: 100vh;
+    margin-top: -56px;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+.landing-text{
+    font-weight: 200;
+    font-size: 3rem;
+}

@@ -1,0 +1,14 @@
+@import url("/styles/index.css");
+
+body{
+    background-color: var(--body-color);
+    color: var(--font-color);
+}
+
+.categories-display{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    width: 80%;
+}

@@ -1,0 +1,33 @@
+@import url("/styles/index.css");
+
+.car-image {
+    width: 80%;
+    max-width: 600px;
+    max-height: 600px;
+    height: auto; 
+    margin-right: 20px; 
+    border-radius: 15px;
+    object-fit: cover; 
+}
+
+.category{
+    background-color: #0d173a;
+    border-radius: 10px;
+    padding: 0.25rem;
+    color: #0969da;
+    font-weight: 600;
+}
+.category:hover{
+    background-color: #0969da;
+    color: aliceblue;
+    font-weight: 600;
+}
+.car-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+.info-text{
+    color: gray;
+    font-size: 0.8rem;
+}

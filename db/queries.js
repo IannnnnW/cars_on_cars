@@ -25,10 +25,10 @@ async function getCarCategories(car_id){
 async function addNewCar(car){
     const carResult =  await Pool.query(
         `
-        INSERT INTO cars (brand, model, year, asset, description)
-        VALUES ($1, $2, $3, $4)
+        INSERT INTO cars (brand, model, year, asset, doors, color, engine, description)
+        VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
         RETURNING id
-        `,[car.brand, car.model, car.year, car.asset, car.description])
+        `,[car.brand, car.model, car.year, car.asset, car.doors, car.color, car.engine, car.description])
     return carResult
 }
 
@@ -49,11 +49,20 @@ async function addNewCategory(category){
         `, [category.name, category.asset])
 }
 
+async function getCarById(id){
+    const { rows } = await Pool.query(`
+        SELECT * FROM cars 
+        WHERE id = $1
+        `, [id])
+    return rows
+}
+
 module.exports = {
     getAllCategories,
     getAllCars,
     getCarCategories,
     addNewCar,
     addNewCarCategory,
-    addNewCategory
+    addNewCategory,
+    getCarById,
 }
