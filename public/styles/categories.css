@@ -12,3 +12,16 @@ body{
     gap: 2rem;
     width: 80%;
 }
+#addcategoryfrom{
+    min-width: 70%;
+}
+/* Mobile Responsiveness */
+@media only screen and (max-width: 767px) {
+    .categories-display{
+        display: flex;
+        flex-direction: column;
+    }
+    #addcategoryform{
+        max-width: 90%;
+    }
+}

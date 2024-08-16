@@ -10,8 +10,8 @@
 <%-include("templates/navbar") %>
 <body class="d-flex flex-column justify-content-between vh-100 pt-5">
     <main class="d-flex align-items-center flex-column">
-        <h3>Create Car Item</h3>
-        <form method="POST" action="/cars/addcar" enctype="multipart/form-data" class="d-flex flex-column w-50 gap-2 mb-3"> 
+        <h3 class="pt-3">Create Car Item</h3>
+        <form method="POST" action="/cars/addcar" enctype="multipart/form-data" id="addcarform" class="d-flex flex-column gap-2 mb-3"> 
             <label for="brand">Brand: </label>
             <input type="text" class="brand" id="brand" name="brand" required/>
             <label for="model">Model: </label>

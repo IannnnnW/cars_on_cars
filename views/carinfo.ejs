@@ -10,7 +10,7 @@
 <%-include("templates/navbar") %>
 <body class="d-flex flex-column justify-content-between vh-100 pt-5">
     <main>
-        <div class="d-flex p-4">
+        <div id="car-information" class="d-flex p-4">
             <img src="<%= locals.car.asset %>" class="car-image"/>
             <section class="d-flex flex-column">
                 <h4><%= car.brand %> <%= car.model %></h4>

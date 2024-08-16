@@ -16,3 +16,19 @@ body{
 .captialize{
     text-transform: capitalize;
 }
+
+#addcarform{
+    min-width: 70%;
+}
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 767px) {
+    .cars-display{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #addcarform{
+        max-width: 90%;
+    }
+}

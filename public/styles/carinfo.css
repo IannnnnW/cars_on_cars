@@ -31,3 +31,15 @@
     color: gray;
     font-size: 0.8rem;
 }
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 767px) {
+    #car-information{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .car-image {
+        width: 100%;
+    }
+}
