@@ -1,10 +1,45 @@
-<nav class="mb-5 pt-3">
+<nav class="mb-5 pt-3" id="navone">
     <ul class="d-flex justify-content-around list-unstyled">
         <li><a href="/categories/addcategory" class="link-offset-2 link-underline link-underline-opacity-0">Add Category</a></li>
         <li><a href="/categories" class="link-offset-2 link-underline link-underline-opacity-0">Categories</a></li>
         <li><a href="/" class="link-offset-2 link-underline link-underline-opacity-0">Home</a></li>
         <li><a href="/cars" class="link-offset-2 link-underline link-underline-opacity-0">Cars</a></li>
         <li><a href="/cars/addcar" class="link-offset-2 link-underline link-underline-opacity-0">Add Car</a></li>
+    </ul>
+</nav>
+<nav class="mb-2 pt-1" id="navtwo">
+    <ul class="d-flex justify-content-around align-items-center list-unstyled" >
+        <li>
+            <a href="/" class="link-offset-2 link-underline link-underline-opacity-0 d-flex gap-2 align-items-center">
+                <i class="bi bi-house-door"></i> 
+                <span>Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="/categories" class="link-offset-2 link-underline link-underline-opacity-0 d-flex gap-2 align-items-center">
+                <i class="bi bi-collection"></i>
+                <span>Categories</span>
+            </a>
+        </li>
+        <li>
+            <a href="/cars" class="link-offset-2 link-underline link-underline-opacity-0 d-flex gap-2 align-items-center">
+                <i class="bi bi-car-front"></i>
+                <span>Cars</span>
+            </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle link-offset-2 link-underline link-underline-opacity-0 d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span>Add</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                    <a class="dropdown-item" href="/categories/addcategory">Add Category</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="/cars/addcar">Add Car</a>
+                </li>
+            </ul>
+        </li>        
     </ul>
 </nav>
 

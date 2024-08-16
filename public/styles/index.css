@@ -207,7 +207,12 @@ nav{
 .margin-top-5{
 margin-top: 5rem;
 }
-
+#navone{
+    display: block;
+}
+#navtwo{
+    display: none;
+}
 /* Mobile Responsiveness */
 @media only screen and (max-width: 767px) {
     @keyframes slide-up {
@@ -226,5 +231,16 @@ margin-top: 5rem;
     .text-overlay-urus{
         position: absolute;
         top: 0%; 
+    }
+    
+    #navone{
+        display: none;
+    }
+
+    #navtwo{
+        display: block;
+    }
+    .bi{
+        font-size: 20px !important;
     }
 }
