@@ -74,13 +74,28 @@ nav{
 
 .text-overlay {
     position: absolute;
+    top: 75%; 
+    left: 40%; 
+    transform: translate(-50%, 0);
+    color: white; 
+    text-align: start;
+}
+
+.text-overlay-cars {
+    position: absolute;
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%);
     color: white; 
     text-align: center;
 }
-
+.text-overlay-footer{
+    position: absolute;
+    top: 30%; 
+    left: 40%; 
+    color: white; 
+    text-align: center;
+}
 .zoom-container{
     overflow: hidden;
 }
@@ -172,4 +187,8 @@ nav{
 
 .scroll-animate {
     animation: slide-up 1s ease-out forwards;
+}
+
+.margin-top-5{
+margin-top: 5rem;
 }

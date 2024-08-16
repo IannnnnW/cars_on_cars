@@ -20,7 +20,7 @@
             <% locals.cars.forEach( car => { %>
                 <a class="d-flex justify-content-center zoom-container position-relative" href="/cars/<%= car.id %>">
                     <img src="<%= car.asset %>" class="img-fluid zoom-image"/>
-                    <h4 class="text-overlay"><%= car.brand %> <%= car.model %></h4>
+                    <h4 class="text-overlay-cars"><%= car.brand %> <%= car.model %></h4>
                 </a>
             <% }) %>
         </div>
